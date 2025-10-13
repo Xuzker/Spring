@@ -4,9 +4,11 @@ import org.example.dto.UserDto;
 import org.example.web.RegisterForm;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
     List<UserDto> findAll();
-    UserDto findById(Long id);
+    Optional<UserDto> findById(Long id);
     UserDto create (RegisterForm registerForm);
+    Optional <UserDto> findByName(String name);
 }
